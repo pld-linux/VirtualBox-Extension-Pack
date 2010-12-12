@@ -1,7 +1,7 @@
 # disable debug - no symbols here
 %define		_enable_debug_packages	0
 
-%define		rel	0.3
+%define		rel	1
 %define		pre	BETA2
 %define		prev	68743
 
