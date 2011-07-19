@@ -1,16 +1,16 @@
 # disable debug - no symbols here
 %define		_enable_debug_packages	0
 
-%define		prev	72916
+%define		prev	73009
 
 Summary:	VirtualBox - support for USB 2.0, RDP server and the PXE bootloader
 Name:		VirtualBox-Extension-Pack
-Version:	4.0.12
+Version:	4.1.0
 Release:	1
 License:	Free for non-commercial use, non-distributable
 Group:		Applications/Emulators
 Source0:	http://download.virtualbox.org/virtualbox/%{version}/Oracle_VM_VirtualBox_Extension_Pack-%{version}-%{prev}.vbox-extpack
-# NoSource0-md5:	0f7923998f8419183c805d7f4cbc2ae8
+# NoSource0-md5:	d13c87a983686afe5780951afd8ba8b5
 NoSource:	0
 URL:		http://www.virtualbox.org/
 BuildRequires:	rpmbuild(macros) >= 1.379
@@ -51,6 +51,9 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/VirtualBox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.*/VBoxEhciR0.r0
 %attr(755,root,root) %{_libdir}/VirtualBox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.*/VBoxEhciR3.so
 %attr(755,root,root) %{_libdir}/VirtualBox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.*/VBoxEhciRC.rc
+%attr(755,root,root) %{_libdir}/VirtualBox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.*/VBoxPciRawDrv.so
+%attr(755,root,root) %{_libdir}/VirtualBox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.*/VBoxPciRawR0.r0
+%attr(755,root,root) %{_libdir}/VirtualBox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.*/VBoxPciRawR3.so
 %attr(755,root,root) %{_libdir}/VirtualBox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.*/VBoxPuelMain.so
 %attr(755,root,root) %{_libdir}/VirtualBox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.*/VBoxVRDP.so
 %{_libdir}/VirtualBox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/PXE-Intel.rom
