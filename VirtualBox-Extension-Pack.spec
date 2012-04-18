@@ -1,14 +1,11 @@
-# disable debug - no symbols here
-%define		_enable_debug_packages	0
-
 Summary:	VirtualBox - support for USB 2.0, RDP server and the PXE bootloader
 Name:		VirtualBox-Extension-Pack
-Version:	4.1.8
+Version:	4.1.10
 Release:	1
 License:	Free for non-commercial use, non-distributable
 Group:		Applications/Emulators
 Source0:	http://download.virtualbox.org/virtualbox/%{version}/Oracle_VM_VirtualBox_Extension_Pack-%{version}.vbox-extpack
-# NoSource0-md5:	3ce7ba6092ba7a8e1d35baa1c63df0a5
+# NoSource0-md5:	438578649459d2260736348a792f8dc1
 NoSource:	0
 URL:		http://www.virtualbox.org/
 BuildRequires:	rpmbuild(macros) >= 1.379
@@ -16,9 +13,12 @@ Requires:	VirtualBox = %{version}
 ExclusiveArch:	%{ix86} %{x8664}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+# disable debug - no symbols here
+%define		_enable_debug_packages	0
+
 %description
-The Oracle VM VirtualBox Extension Pack, adds support for USB 2.0,
-RDP server and the PXE bootloader with E1000 support. 
+The Oracle VM VirtualBox Extension Pack, adds support for USB 2.0, RDP
+server and the PXE bootloader with E1000 support.
 
 %prep
 %setup -qcT
