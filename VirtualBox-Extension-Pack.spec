@@ -1,11 +1,11 @@
 Summary:	VirtualBox - support for USB 2.0, RDP server and the PXE bootloader
 Name:		VirtualBox-Extension-Pack
-Version:	6.1.46
+Version:	7.0.10
 Release:	1
 License:	Free for non-commercial use, non-distributable
 Group:		Applications/Emulators
 Source0:	http://download.virtualbox.org/virtualbox/%{version}/Oracle_VM_VirtualBox_Extension_Pack-%{version}.vbox-extpack
-# Source0-md5:	7e0d4985f4e4794dcd4fd23ad91aeddd
+# Source0-md5:	e41adce504079e6e9a4c1efdeeb29041
 NoSource:	0
 URL:		http://www.virtualbox.org/
 BuildRequires:	rpmbuild(macros) >= 1.379
@@ -46,13 +46,12 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %dir %{_libdir}/VirtualBox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack
 %dir %{_libdir}/VirtualBox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.*
-%attr(755,root,root) %{_libdir}/VirtualBox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.*/VBoxEhciR0.r0
-%attr(755,root,root) %{_libdir}/VirtualBox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.*/VBoxEhciR3.so
 %attr(755,root,root) %{_libdir}/VirtualBox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.*/VBoxHostWebcam.so
 %attr(755,root,root) %{_libdir}/VirtualBox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.*/VBoxNvmeR0.r0
 %attr(755,root,root) %{_libdir}/VirtualBox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.*/VBoxNvmeR3.so
 %attr(755,root,root) %{_libdir}/VirtualBox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.*/VBoxPuelMain.so
 %attr(755,root,root) %{_libdir}/VirtualBox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.*/VBoxPuelMainVM.so
+%attr(755,root,root) %{_libdir}/VirtualBox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.*/VBoxPuelCrypto.so
 %attr(755,root,root) %{_libdir}/VirtualBox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.*/VBoxUsbCardReaderR3.so
 %attr(755,root,root) %{_libdir}/VirtualBox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.*/VBoxUsbWebcamR3.so
 %attr(755,root,root) %{_libdir}/VirtualBox/ExtensionPacks/Oracle_VM_VirtualBox_Extension_Pack/linux.*/VBoxVRDP.so
